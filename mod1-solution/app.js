@@ -8,7 +8,6 @@ angular.module('LunchCheck', [])
 
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController ($scope) {
-  //$scope.items = null;
   $scope.items = " ";
   $scope.msg = '';
   $scope.noOfItems = 0;
@@ -16,7 +15,6 @@ function LunchCheckController ($scope) {
   $scope.itemsArr1 = [];
 
   $scope.countItems = function () {
-    //if ($scope.items != null){
       $scope.itemsArr = $scope.items.split(',');
       var i;
       for (i = 0; i < $scope.itemsArr.length; i++) {
@@ -25,7 +23,6 @@ function LunchCheckController ($scope) {
           $scope.noOfItems += 1;
           }
         }
-      //}
    };
 
   $scope.showOrderStatus = function () {
@@ -40,7 +37,6 @@ function LunchCheckController ($scope) {
         $scope.msg = 'Please enter data first';
       }
       $scope.noOfItems = 0;
-      //$scope.items = null;
     };
 
   };

@@ -18,14 +18,16 @@
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control" ng-model="items" ng-blur="countItems()">
          </div>
+         <br>
+         <div class="form-group">
+           Please note : Empty items are not counted
+         </div>
          <div class="form-group">
              <button class="btn btn-default"  ng-click="showOrderStatus()">Check If Too Much</button>
          </div>
          <div class="form-group message">
            <!-- Your message can go here. -->
            <p ng-style="customStyle.style">{{msg}}</p>
-           {{noOfItems}}
-           {{itemsArr}}
          </div>
    </div>
 
